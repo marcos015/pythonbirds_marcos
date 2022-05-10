@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
-from os import path
+
 import sys
+from os import path
 
 project_dir = path.dirname(__file__)
 project_dir = path.join('..')
 sys.path.append(project_dir)
 
-import unittest
 from unittest.case import TestCase
 from atores import Ator, DESTRUIDO, ATIVO, Obstaculo, Porco, PassaroAmarelo, PassaroVermelho
 
@@ -16,7 +16,8 @@ from atores import Ator, DESTRUIDO, ATIVO, Obstaculo, Porco, PassaroAmarelo, Pas
 class AtorTestes(TestCase):
     def teste_valores_padrao(self):
         'Testa valores iniciais padrão de um Ator'
-        ator = Ator()
+        ator = A
+        ator()
         self.assertEqual(0, ator.x)
         self.assertEqual(0, ator.y)
         self.assertEqual(ATIVO, ator.status)
@@ -257,7 +258,7 @@ class PassaroAmareloTests(PassaroBaseTests):
     def teste_velocidade_escalar(self):
         self.assertEqual(30, PassaroAmarelo.velocidade_escalar)
 
-    def teste_lacamento_vertical(self):
+    def teste_lancamento_vertical(self):
         """
         Tests de lançamento vertical. Nele, o passaro só se move verticalmente e sua posição y se matém contanstante
         :return:
